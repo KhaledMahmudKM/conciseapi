@@ -1,0 +1,31 @@
+[
+  {
+    "separator": "Part I · Foundations"
+  },
+  "01-what-is-an-api.md",
+  "02-lab.md",
+  "03-http.md",
+  "04-json.md",
+  {
+    "separator": "Part II · Building REST APIs"
+  },
+  "05-rest-design.md",
+  "06-building.md",
+  "07-openapi.md",
+  {
+    "separator": "Part III · Securing APIs"
+  },
+  "08-auth.md",
+  "09-api-security.md",
+  {
+    "separator": "Part IV · APIs in Production"
+  },
+  "10-performance.md",
+  "11-evolving.md",
+  "12-beyond-rest.md",
+  {
+    "separator": "Appendix"
+  },
+  "13-reference.md",
+  "glossary.md"
+]

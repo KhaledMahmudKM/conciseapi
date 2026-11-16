@@ -1,0 +1,11 @@
+# Example code for the Concise Book on APIs.
+# Install into a virtual environment:
+#   python -m venv .venv
+#   source .venv/bin/activate        (Windows Git Bash: source .venv/Scripts/activate)
+#   pip install -r requirements.txt
+fastapi[standard]==0.163.0
+requests==2.32.5
+pyjwt==2.15.1
+pytest==9.2.0
+strawberry-graphql[fastapi]==0.341.2
+grpcio-tools==1.85.1
