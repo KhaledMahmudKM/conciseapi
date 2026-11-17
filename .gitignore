@@ -6,3 +6,4 @@ code/grpc_demo/library_pb2.py
 code/grpc_demo/library_pb2_grpc.py
 code/grpc_demo/library_pb2.pyi
 openapi.json
+README.local.md
