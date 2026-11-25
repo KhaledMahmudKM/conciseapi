@@ -574,3 +574,63 @@ Three habits from this client apply to every API client you write:
 - Report every error as **problem details** (RFC 9457), without leaking internals.
 - **Validate** query parameters, enforce a **maximum page size**, and provide the next page in a **Link** header.
 - Clients should set **timeouts**, check **status codes**, and **follow links**.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-6-building-a-rest-api).
+
+**1. Why use separate models for create input, partial update and output?**
+
+- A. To have more code
+- B. Pydantic requires it
+- C. To speed up JSON
+- D. Each shape has different rules: clients never send id, updates are partial, output includes server fields
+
+**2. What does extra="forbid" do on an input model?**
+
+- A. Allows any fields
+- B. Rejects requests that contain unknown fields
+- C. Hides fields from output
+- D. Makes all fields optional
+
+**3. What should a successful create return?**
+
+- A. 200 with no body
+- B. 204 No Content
+- C. 302 Found
+- D. 201 Created with a Location header
+
+**4. What should a successful DELETE return?**
+
+- A. 204 No Content
+- B. 200 with the deleted item, always
+- C. 404
+- D. 201
+
+**5. Why use exclude_unset when applying a PATCH?**
+
+- A. To speed up saving
+- B. To remove the id
+- C. So only fields the client actually sent are changed, not fields that defaulted to None
+- D. To validate the body
+
+**6. Which standard defines the problem details error format used in the book?**
+
+- A. RFC 6749
+- B. RFC 7519
+- C. RFC 9457
+- D. RFC 2616
+
+**7. Where does the book's API put the URL of the next page?**
+
+- A. In a cookie
+- B. In a Link header
+- C. In the request body
+- D. Nowhere; clients compute it
+
+**8. Which client practice does the chapter insist on?**
+
+- A. Never check status codes
+- B. Retry forever
+- C. Always set a timeout
+- D. Disable TLS verification

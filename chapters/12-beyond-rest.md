@@ -870,3 +870,63 @@ In a browser, `new EventSource("/events")` receives these, and reconnects automa
 - **Webhooks**: the provider calls you; **verify signatures**, reject stale timestamps, and **deduplicate** events.
 - **SSE** pushes events from server to browser over plain HTTP; **WebSockets** give full two-way messaging.
 - Real systems mix styles: REST at the edge, gRPC inside, events between systems.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-12-beyond-rest).
+
+**1. How does a GraphQL API differ from REST?**
+
+- A. It has many endpoints
+- B. It has one endpoint and a typed schema, and the client chooses the response shape
+- C. It cannot change data
+- D. It uses XML only
+
+**2. Which GraphQL risk must the server control?**
+
+- A. Too few fields
+- B. Missing URLs
+- C. Query depth and complexity, since one query can ask for a huge amount of work
+- D. Lack of JSON
+
+**3. Why does HTTP caching work poorly for GraphQL?**
+
+- A. Queries are usually sent with POST to one URL
+- B. GraphQL has no responses
+- C. GraphQL forbids caching
+- D. Responses are binary
+
+**4. Why must you never reuse or change a field tag in a protobuf message?**
+
+- A. Messages carry tags instead of names, so changing a tag breaks compatibility
+- B. Tags are secret
+- C. It slows compilation
+- D. gRPC forbids comments
+
+**5. Where is gRPC most at home?**
+
+- A. Browser-facing public APIs
+- B. Email
+- C. Calls between internal services
+- D. Static websites
+
+**6. What must a webhook receiver do first?**
+
+- A. Reply with the full data
+- B. Verify the signature and reject stale timestamps
+- C. Forward it to all users
+- D. Store it unencrypted
+
+**7. Why must webhook handlers deduplicate events?**
+
+- A. To save disk
+- B. Events are always duplicated
+- C. HTTP requires it
+- D. Providers retry, so the same event can arrive more than once
+
+**8. Which technology gives full two-way messaging between browser and server?**
+
+- A. Server-sent events
+- B. WebSockets
+- C. Webhooks
+- D. HTTP caching

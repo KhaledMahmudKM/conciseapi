@@ -418,3 +418,63 @@ OpenAPI describes request and response APIs. Related specifications cover other 
 - The document drives **docs**, **SDKs**, **mocks**, **contract tests**, **linting**, and **gateways**.
 - Generated docs can drift from behaviour; **test the API against its description**.
 - **Code-first** is quick; **design-first** lets consumers review the contract early.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-7-documenting-apis-with-openapi).
+
+**1. What does an OpenAPI document describe?**
+
+- A. An HTTP API, in one machine-readable JSON or YAML document
+- B. A server's source code
+- C. A database schema only
+- D. A user interface
+
+**2. Which OpenAPI version does FastAPI generate?**
+
+- A. 2.0
+- B. 3.0
+- C. 3.1
+- D. 3.2
+
+**3. What is the components section of an OpenAPI document for?**
+
+- A. Listing servers
+- B. Release notes
+- C. Test results
+- D. Reusable schemas and security schemes, referenced with $ref
+
+**4. Which two documentation pages does FastAPI serve from the OpenAPI document?**
+
+- A. Javadoc and Sphinx
+- B. Swagger UI at /docs and ReDoc at /redoc
+- C. README and CHANGELOG
+- D. Postman and Insomnia
+
+**5. What does Schemathesis do with an OpenAPI document?**
+
+- A. Formats it
+- B. Draws diagrams
+- C. Generates requests from it and tests that the API behaves as described
+- D. Deploys the API
+
+**6. What does Spectral do?**
+
+- A. Lints the OpenAPI document against style rules
+- B. Mocks the API
+- C. Encrypts traffic
+- D. Generates SDKs
+
+**7. What is the main advantage of design-first over code-first?**
+
+- A. Consumers can review the contract before any code is written
+- B. Less typing
+- C. It needs no tools
+- D. It is always faster
+
+**8. Which specification describes event-driven, message-based APIs, as OpenAPI does for HTTP?**
+
+- A. Arazzo
+- B. JSON Schema
+- C. AsyncAPI
+- D. GraphQL SDL

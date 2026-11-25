@@ -730,3 +730,63 @@ Beyond these, **contract tests** (Schemathesis, from Chapter 7) check every resp
 - **Gateways** centralise TLS, authentication, rate limits, routing, and inventory.
 - **Request IDs** tie together **logs, metrics, and traces**; use structured logs and **OpenTelemetry**; never log secrets.
 - Test at every level, and automate it.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-11-evolving-and-operating-apis).
+
+**1. Which change is usually non-breaking?**
+
+- A. Adding a new optional field to a response
+- B. Renaming a field
+- C. Removing an endpoint
+- D. Changing a field's type
+
+**2. Where do most APIs put the version?**
+
+- A. In the request body
+- B. In a cookie
+- C. In the URL path, such as /v2/
+- D. In the domain's TLS certificate
+
+**3. Which header announces when an endpoint will stop working?**
+
+- A. Deprecation
+- B. Retry-After
+- C. Expires
+- D. Sunset
+
+**4. What should a retired endpoint return?**
+
+- A. 404 Not Found
+- B. 410 Gone
+- C. 301 always
+- D. 500
+
+**5. Which is a typical job of an API gateway?**
+
+- A. Running the database
+- B. Writing business logic
+- C. Centralising TLS, authentication, rate limits, routing and inventory
+- D. Compiling code
+
+**6. What ties together the logs, metrics and traces of one request across services?**
+
+- A. A request ID
+- B. The client's IP address
+- C. The timestamp
+- D. The HTTP method
+
+**7. What must never appear in logs?**
+
+- A. Secrets, such as tokens and passwords
+- B. Request IDs
+- C. Status codes
+- D. Latencies
+
+**8. What is OpenTelemetry?**
+
+- A. A rate limiter
+- B. An API gateway
+- C. A vendor-neutral standard and toolkit for traces, metrics and logs
+- D. A test framework

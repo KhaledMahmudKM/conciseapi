@@ -667,3 +667,63 @@ As an exercise, extend the design with authors and reviews: decide the URLs, whi
 - Model awkward actions as **state changes** or **new resources** before resorting to action endpoints.
 - **Filter, sort, and paginate** with query parameters; always enforce a **maximum page size**; prefer **cursors** for large or changing data.
 - **Consistency** matters more than any single rule.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-5-designing-rest-apis).
+
+**1. Which URL follows the resource naming guidelines?**
+
+- A. /books/42
+- B. /getBooks
+- C. /Book/42.json
+- D. /api/v1/selectBook?id=42
+
+**2. How do PUT and PATCH differ?**
+
+- A. They are the same
+- B. PATCH creates a resource; PUT deletes it
+- C. PUT sends the complete new state; PATCH sends only the changes
+- D. PUT is for collections only
+
+**3. Which request creates a new book in the collection?**
+
+- A. GET /books
+- B. POST /books
+- C. PUT /books
+- D. DELETE /books/42
+
+**4. What should you try first to model 'cancel an order'?**
+
+- A. POST /cancelOrder
+- B. DELETE /orders
+- C. GET /orders/42/cancel
+- D. A state change, such as PATCH /orders/42 with {"status": "cancelled"}
+
+**5. What is the main drawback of offset pagination?**
+
+- A. Clients cannot jump to a page
+- B. Pages shift when items are added or removed, causing duplicates or misses, and deep offsets are slow
+- C. It needs a cursor
+- D. It cannot sort
+
+**6. Why should every collection enforce a maximum page size?**
+
+- A. To make pages look neat
+- B. Because HTTP requires it
+- C. To support hypermedia
+- D. So no client can request a huge page that overloads the server
+
+**7. At which level of Richardson's maturity model do responses include links that tell the client what it can do next?**
+
+- A. Level 0
+- B. Level 1
+- C. Level 2
+- D. Level 3
+
+**8. Which rule does the chapter put above all the others?**
+
+- A. Always use hypermedia
+- B. Use nested URLs
+- C. Consistency
+- D. Avoid query parameters

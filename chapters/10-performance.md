@@ -1087,3 +1087,63 @@ The demo uses FastAPI's background tasks, which run in the same process. Real sy
 - Clients retry only transient failures, with **exponential backoff and jitter**, and **timeouts** always.
 - **Idempotency keys** make `POST` safe to retry.
 - Return **202 Accepted** and a status URL for **long-running** work.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-10-performance-and-reliability).
+
+**1. Why report latency as percentiles instead of averages?**
+
+- A. They are easier to compute
+- B. Percentiles are always lower
+- C. HTTP requires it
+- D. The average hides the slow tail that users actually notice
+
+**2. What does a server answer to a conditional GET whose If-None-Match matches the current ETag?**
+
+- A. 200 with the body
+- B. 304 Not Modified, with no body
+- C. 412
+- D. 204
+
+**3. How does If-Match prevent lost updates?**
+
+- A. It locks the database row
+- B. It retries automatically
+- C. It merges changes
+- D. The update succeeds only if the resource still has the ETag the client read; otherwise 412
+
+**4. Which algorithm does the chapter use for rate limiting?**
+
+- A. Token bucket
+- B. Round robin
+- C. Least connections
+- D. First in, first out
+
+**5. What should a rate-limited request receive?**
+
+- A. 403
+- B. 503 always
+- C. 429 Too Many Requests with a Retry-After header
+- D. 200 with a warning
+
+**6. Which failures should a client retry?**
+
+- A. All of them
+- B. Only 400
+- C. Only 404
+- D. Only transient ones, such as timeouts, 429 and 503
+
+**7. Why add jitter to exponential backoff?**
+
+- A. To make retries faster
+- B. So many clients do not retry at exactly the same moments and overload the server again
+- C. To encrypt retries
+- D. To skip the timeout
+
+**8. What should an API return when work will take minutes?**
+
+- A. Keep the connection open
+- B. 200 immediately with no result
+- C. 202 Accepted with a status URL to poll
+- D. 504

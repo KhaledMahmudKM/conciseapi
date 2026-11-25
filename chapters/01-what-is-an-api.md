@@ -522,3 +522,63 @@ The diagrams in this book use colour consistently:
 - Main styles: **REST**, **GraphQL**, **gRPC**, **webhooks**, and legacy **SOAP**.
 
 The next chapter sets up the lab and builds your first API.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-1-what-is-an-api).
+
+**1. What is an API, in the sense used in this book?**
+
+- A. A contract that lets one program use another without knowing how it is built
+- B. A program that runs on a server
+- C. A database query language
+- D. A web page for developers
+
+**2. In the restaurant analogy, what plays the role of the API?**
+
+- A. The kitchen
+- B. The chef
+- C. The menu
+- D. The food
+
+**3. Why must web APIs be designed differently from library APIs?**
+
+- A. They use different languages
+- B. Calls cross a network, so they can be slow or fail
+- C. They have no parameters
+- D. They cannot return errors
+
+**4. Which is a key benefit of APIs between teams?**
+
+- A. Teams must share one codebase
+- B. Every team uses the same database
+- C. No documentation is needed
+- D. Teams can work independently and change their implementations behind the contract
+
+**5. Why are published API contracts hard to change?**
+
+- A. They are stored in read-only files
+- B. Clients you do not control depend on them, and a change can break them
+- C. HTTP does not allow changes
+- D. They are protected by copyright
+
+**6. Which API style lets the client ask for exactly the fields it wants in one query?**
+
+- A. REST
+- B. SOAP
+- C. Webhooks
+- D. GraphQL
+
+**7. Which style reverses the usual direction, with the server calling the client when an event happens?**
+
+- A. Webhooks
+- B. gRPC
+- C. REST
+- D. SOAP
+
+**8. What is an SDK, in API vocabulary?**
+
+- A. A server deployment kit
+- B. A security standard
+- C. A client library that wraps the API in functions for a programming language
+- D. An API style

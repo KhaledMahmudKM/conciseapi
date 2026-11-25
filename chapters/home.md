@@ -30,4 +30,4 @@ The **Appendix** is a curl and HTTP cheat sheet, and the **Glossary** defines ev
 
 Read Part I first, then Part II in order. Parts III and IV can be read in any order after that.
 
-Each chapter ends with a short summary. Sections marked **Hands on** use the example code, which is in the [`code/` folder](https://github.com/khaledmahmudkm/conciseapi/tree/main/code) of this book's repository, together with automated tests for every example.
+Each chapter ends with a short summary and a **Check your understanding** quiz of eight multiple-choice questions; the **Answers to Chapter Questions** chapter, after the Glossary, gives every answer with a short explanation. Sections marked **Hands on** use the example code, which is in the [`code/` folder](https://github.com/khaledmahmudkm/conciseapi/tree/main/code) of this book's repository, together with automated tests for every example.

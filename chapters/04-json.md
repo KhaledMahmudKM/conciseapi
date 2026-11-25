@@ -559,3 +559,63 @@ Binary data such as images is usually not put inside JSON at all. APIs upload fi
 - Choose consistent **naming** and wrap collections in an **envelope**.
 - **JSON Schema** describes valid documents; **Pydantic** models generate schemas and validate input.
 - **XML**, **YAML**, **Protocol Buffers**, and **form encoding** each have their place; JSON dominates web APIs.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-4-json-and-data-formats).
+
+**1. How many value types does JSON have?**
+
+- A. Four
+- B. Six
+- C. Five
+- D. Eight
+
+**2. Which is valid JSON?**
+
+- A. {'name': 'Ada'}
+- B. {"name": "Ada",}
+- C. {"name": "Ada"}
+- D. {name: "Ada"}
+
+**3. How should an API send a date and time?**
+
+- A. As an ISO 8601 string with a time zone
+- B. As a number of days
+- C. As a localised string, like 11/25/26
+- D. JSON has a date type
+
+**4. Why do some APIs send very large IDs as strings?**
+
+- A. JavaScript numbers are exact only up to 2^53, so larger IDs can silently change
+- B. Strings are faster
+- C. JSON forbids large numbers
+- D. To hide the IDs
+
+**5. How should money be represented?**
+
+- A. As a float such as 19.99
+- B. As a boolean
+- C. As an integer in the smallest unit, or a decimal string
+- D. As a percentage
+
+**6. Why wrap a collection in an envelope such as {"items": [...]}?**
+
+- A. It is required by JSON
+- B. It leaves room to add fields such as a total or next-page link without breaking clients
+- C. It makes the response smaller
+- D. It encrypts the data
+
+**7. What does JSON Schema describe?**
+
+- A. How to compress JSON
+- B. The order of fields
+- C. How to convert JSON to XML
+- D. Which JSON documents are valid: types, required fields and limits
+
+**8. Which format is binary and schema-first, and used by gRPC?**
+
+- A. YAML
+- B. Protocol Buffers
+- C. XML
+- D. Form encoding

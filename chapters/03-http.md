@@ -798,3 +798,63 @@ The last request returns `404` with a JSON body, because FastAPI answers unknown
 - **Headers** carry metadata: content type, credentials, caching, retry hints.
 - HTTP/1.1, /2, and /3 share the same semantics. Real APIs always use **HTTPS**.
 - HTTP is **stateless**, which is what lets APIs scale across many servers.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-3-http-for-apis).
+
+**1. What separates the headers from the body of an HTTP message?**
+
+- A. A blank line
+- B. A semicolon
+- C. A closing tag
+- D. The Content-Length header
+
+**2. Which method is neither safe nor idempotent?**
+
+- A. GET
+- B. PUT
+- C. POST
+- D. DELETE
+
+**3. What does idempotent mean for a method?**
+
+- A. It is fast
+- B. It changes nothing on the server
+- C. It needs no authentication
+- D. Repeating the same request has the same effect as sending it once
+
+**4. A request has no credentials. Which status code fits?**
+
+- A. 400
+- B. 401
+- C. 403
+- D. 404
+
+**5. What does a 5xx status code mean?**
+
+- A. Success
+- B. Redirection
+- C. The server failed
+- D. The client sent a bad request
+
+**6. How does a client ask for a particular response format, such as JSON?**
+
+- A. With the Accept header
+- B. With the Content-Type header
+- C. With a .json extension
+- D. With a query parameter only
+
+**7. Which HTTP version runs over QUIC instead of TCP?**
+
+- A. HTTP/1.0
+- B. HTTP/1.1
+- C. HTTP/2
+- D. HTTP/3
+
+**8. Why does HTTP's statelessness help APIs scale?**
+
+- A. Requests are smaller
+- B. It removes the need for TLS
+- C. Each request carries everything needed, so any server can handle it
+- D. It caches everything

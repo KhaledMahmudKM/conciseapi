@@ -908,3 +908,63 @@ In practice you rarely build an authorization server yourself. Use an establishe
 - A **JWT** is signed, not encrypted. Verify it fully, with a **pinned algorithm**.
 - **OAuth 2.0** delegates limited access; use **authorization code with PKCE** for users and **client credentials** for services. **OAuth 2.1** removes the password and implicit grants.
 - **OpenID Connect** adds login with **ID tokens**. Use an existing identity provider.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-8-authentication-and-authorization).
+
+**1. What question does authentication answer, and which status code reports its failure?**
+
+- A. What may you do? 403
+- B. Who are you? 401
+- C. Where are you? 404
+- D. How many requests? 429
+
+**2. How should a server store API keys?**
+
+- A. In plain text
+- B. In the URL
+- C. As hashes, like passwords
+- D. In a cookie
+
+**3. Is a JWT's payload secret?**
+
+- A. No, it is signed, not encrypted, so anyone can read it
+- B. Yes, it is encrypted
+- C. Only the header is readable
+- D. Only with HTTPS
+
+**4. Why pin the algorithm, as in algorithms=["HS256"], when verifying a JWT?**
+
+- A. It stops forged tokens that claim alg none or switch algorithms
+- B. It is faster
+- C. It shortens the token
+- D. It encrypts the payload
+
+**5. Why do the demo's access tokens last only 15 minutes?**
+
+- A. To save memory
+- B. OAuth requires it
+- C. A JWT is hard to revoke, so a short lifetime limits damage if one leaks
+- D. Clocks drift
+
+**6. Which OAuth 2.0 flow should a user-facing app use?**
+
+- A. Password grant
+- B. Authorization code with PKCE
+- C. Implicit grant
+- D. Client credentials
+
+**7. Which flow fits one backend service calling another, with no user involved?**
+
+- A. Authorization code with PKCE
+- B. Implicit grant
+- C. Device code
+- D. Client credentials
+
+**8. What does OpenID Connect add to OAuth 2.0?**
+
+- A. Rate limiting
+- B. Login, with an ID token that tells the client who the user is
+- C. Encryption of all traffic
+- D. API versioning

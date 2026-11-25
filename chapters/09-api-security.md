@@ -916,3 +916,63 @@ Tools such as OWASP ZAP, Burp Suite, and the contract-testing tools from Chapter
 - **API7**: fetch client-supplied URLs only through an **allowlist**, https only, public IPs only, no redirects.
 - **CORS** protects browser users, not your API; configure it narrowly.
 - Layer defences and write **tests** for every security rule.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-9-api-security).
+
+**1. According to the chapter, where do most API breaches come from?**
+
+- A. Authorization failures by authenticated users
+- B. Broken encryption
+- C. DDoS attacks
+- D. Weak passwords only
+
+**2. A user changes /orders/41 to /orders/42 and sees someone else's order. Which risk is this?**
+
+- A. API4 Unrestricted resource consumption
+- B. API7 Server side request forgery
+- C. API1 Broken object level authorization
+- D. API9 Inventory management
+
+**3. What should the API answer when a user requests another user's object?**
+
+- A. 403, to be precise
+- B. 404, so it does not reveal that the object exists
+- C. 200 with an empty body
+- D. 500
+
+**4. A user sets "role": "admin" in a profile update and it is saved. Which defence would have stopped this?**
+
+- A. CORS
+- B. HTTPS
+- C. Rate limiting
+- D. Input models with extra fields forbidden, instead of raw dictionaries
+
+**5. A regular user calls DELETE /admin/users/7 successfully. Which risk is this?**
+
+- A. API1
+- B. API5 Broken function level authorization
+- C. API3
+- D. API8
+
+**6. Why is SSRF dangerous in the cloud?**
+
+- A. It slows the server
+- B. It breaks CORS
+- C. It deletes logs
+- D. The server can be made to fetch internal addresses such as the metadata service at 169.254.169.254, which hands out credentials
+
+**7. What does CORS protect?**
+
+- A. Browser users, by controlling which sites' scripts may read your API's responses
+- B. Your API from all attackers
+- C. The database
+- D. Server-to-server calls
+
+**8. Which practice does the chapter recommend for every security rule?**
+
+- A. Document it in a wiki
+- B. Enforce it only in the gateway
+- C. Write a test for it
+- D. Check it once a year

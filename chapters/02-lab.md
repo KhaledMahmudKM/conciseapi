@@ -326,3 +326,63 @@ docker run --rm -it -p 8000:8000 -v "$PWD":/code -w /code python:3.13 \
 - A FastAPI endpoint is a **decorated function**; type hints define **path** and **query parameters** and their validation.
 - Invalid input is rejected with **422** before your code runs.
 - `/docs` shows **interactive documentation** generated from the API's OpenAPI description.
+
+## Check your understanding
+
+Choose the best answer for each question, then check your answers in [Answers to Chapter Questions](answers.md#chapter-2-the-lab).
+
+**1. In the lab, which role does uvicorn play?**
+
+- A. A web framework
+- B. An HTTP client
+- C. A test runner
+- D. An ASGI server that runs the FastAPI application
+
+**2. How is a FastAPI endpoint written?**
+
+- A. As a class with an XML configuration
+- B. As a decorated Python function
+- C. As a JSON file
+- D. As a shell script
+
+**3. In GET /books/42?format=short, which part is a path parameter?**
+
+- A. /books
+- B. format
+- C. short
+- D. 42
+
+**4. What does FastAPI return if a request's book_id is 'abc' but the type hint is int?**
+
+- A. 422, before your function runs
+- B. 200 with null
+- C. 500 Internal Server Error
+- D. 404 Not Found
+
+**5. What is at http://127.0.0.1:8000/docs?**
+
+- A. The book's chapters
+- B. Server logs
+- C. Interactive documentation generated from the API's OpenAPI description
+- D. The Python source
+
+**6. Why does the lab use a virtual environment?**
+
+- A. To speed up Python
+- B. To run Docker
+- C. To encrypt traffic
+- D. To keep the project's packages separate from the system and other projects
+
+**7. What does the framework do with your function's return value?**
+
+- A. Ignores it
+- B. Serialises it, usually to JSON, as the response body
+- C. Saves it to a file
+- D. Prints it to the console only
+
+**8. Which tool in the lab runs the automated tests for every example?**
+
+- A. curl
+- B. uvicorn
+- C. pytest
+- D. requests
